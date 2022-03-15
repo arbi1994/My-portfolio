@@ -1,0 +1,73 @@
+@use '../../sass/abstracts' as *;
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 40%;
+  z-index: -1;
+  width: 70%;
+}
+
+.guy {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  width: 40%;
+  z-index: -1;
+
+  
+  @include media("<=tablet"){
+    width: 50%;
+    bottom: 0%;
+  }
+
+  @include media("<tablet"){
+    width: 50%;
+    bottom: 10%;
+  }
+
+  @include media("<=phoneM"){
+    display: none;
+  }
+}
+
+.contact-blob {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 40%;
+  z-index: -1;
+  width: 70%;
+
+  @include media("<=tablet"){
+    width: 100%;
+  }
+
+  @include media("<=phone"){
+    right: -20%;
+  }
+}
+
+.contact-guy {
+  position: absolute;
+  bottom: 0;
+  left: -12%;
+  width: 40%;
+  z-index: -1;
+  width: 70%;
+
+  @include media("<=tablet"){
+    width: 130%;
+    left: -15%;
+  }
+
+  @include media("<=phoneL"){
+    width: 100%;
+    left: -10%;
+  }
+
+  @include media("<=phoneM"){
+    display: none;
+  }
+}

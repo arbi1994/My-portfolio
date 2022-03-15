@@ -1,0 +1,92 @@
+@use '../../sass/abstracts' as *;
+
+.contacts {
+  @include flex(column, center, center);
+
+  .header {
+    padding-bottom: 4em;
+
+    @include media("<=phoneL"){
+      padding: 0 0 4em 0;
+    }
+  }
+
+  .contact-links {
+    @include flex(row, center, center);
+    width: 100%;
+  }
+
+  .link {
+    @include flex(row, _, center);
+    width: 100%;
+    padding: 4em;
+
+    @include media("<=tablet"){
+      padding: 3em;
+    }
+
+    @include media("<=phoneL"){
+      padding: 2em;
+    }
+
+    .icon {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8em;
+        height: 8em;
+        background: linear-gradient(135deg, $purple, $red);
+        border-radius: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+
+        @include media("<=tablet"){
+          width: 5em;
+          height: 5em;
+        }
+      }
+      
+      svg {
+        width: 2.5em;
+        color: white;
+
+        @include media("<=tablet"){
+          width: 2em;
+        }
+      }
+    }
+
+    .content {
+      flex: 0 1 30em;
+      @include flex(column, center, flex-start);
+      padding-left: 5em;
+
+      @include media("<=tablet"){
+        padding-left: 3em;
+      }
+
+      h5 {
+        font-weight: 600;
+      }
+
+      a {
+        font-weight: 500;
+        background-image: linear-gradient(to right, $purple, $red);
+        background-size: 100%;        
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+      }
+
+      p{
+        width: 100%;
+        font-weight: 400;
+      }
+    }
+  }
+}

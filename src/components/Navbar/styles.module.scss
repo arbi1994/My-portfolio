@@ -1,0 +1,139 @@
+@use "../../sass/abstracts" as *;
+@use "../../sass/base" as *;
+
+.navbar {
+  width: 100%;
+  padding: 2em 0;
+  width: 100%;
+  grid-column: 2;
+  z-index: 2;
+}
+
+.navbar-inner {
+  @include flex(row, space-between, center);
+}
+
+.navbar-left {
+  flex: 0 0 6em;
+  @include flex(row, center, center);
+
+  .navbar-logo {
+    height: 100%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.navbar-right {
+  flex: 0 0 30vw;
+
+  @include media("<=tablet") {
+    flex: none;
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: -9em;
+      right: -8em;
+      width: 16em;
+      height: 16em;
+      border-radius: 50%;
+      background: white;
+      padding: 2.5em;
+      z-index: 0;
+      transition: all 0.5s cubic-bezier(0.45, -0.32, 0.33, 1.24);
+  
+      @include media("<=phoneL"){
+        top: -7.5em;
+        right: -7.5em;
+        width: 14em;
+        height: 14em;
+        padding: 1.5em;
+      }
+    }
+
+    &.active {
+      &::before {
+        pointer-events: none;
+        transform: scale(15);
+        transition: all 0.5s cubic-bezier(0.45, -0.32, 0.33, 1.24)
+      }
+    }
+  }
+
+  ul {
+    @include flex(row, space-between, center);
+
+    @include media("<=tablet") {
+      @include flex(column, center, center);
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    li {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+
+      @include media("<=tablet") {
+        padding: 7em;
+      }
+      
+      button {
+        border: none;
+        color: $dark-blue;
+        background: transparent;
+        font-size: clamp(1.8rem, 1.5vw, 4.8rem);
+        font-weight: 600;
+        width: 100%;
+        cursor: pointer;
+        transition: transform 0.35s cubic-bezier(0.45, -0.32, 0.33, 1.24);
+
+        &:hover {
+          transform: scale(1.3);
+        }
+        
+        @include media("<=tablet") {
+          font-size: clamp(1.8rem, 5vw, 5rem);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .active{
+    top: 0%;
+  }
+  
+  .navBtn {
+    display: none;
+    border: none;
+    background-color: transparent;
+    max-width: 5em;
+    max-height: 5em;
+    cursor: pointer;
+    z-index: 5;
+    position: fixed;
+    position: fixed;
+    top: 4%;
+    right: 8%;
+
+    @include media("<=tablet") {
+      display: block;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+

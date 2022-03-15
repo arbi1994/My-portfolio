@@ -1,0 +1,55 @@
+@use "../../sass/abstracts" as *;
+
+.container {
+  height: 15em;
+  width: 5em;
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  @include flex(column, space-between, center);
+  z-index: 5;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+
+  .box {
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    background: $white;
+    cursor: pointer;
+    border: 1px solid $dark-blue;
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.4);
+
+    &:hover {
+      transform: scale(1.5);
+      transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.4);
+    }
+
+    &::after {
+      mix-blend-mode: difference;
+    }
+
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+}
+
+.fill {
+  background: $dark-blue !important;
+}

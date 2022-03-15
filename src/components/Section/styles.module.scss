@@ -1,0 +1,88 @@
+@use '../../sass/abstracts' as *;
+
+.section {
+  @include grid(8vw);
+  width: 100%;
+  min-height: 100vh;
+  color: $dark-blue;
+  overflow-x: hidden;
+  position: relative;
+
+  @include media("<=phoneL"){
+    @include grid(2vw);
+  }
+
+  .wrapper {
+    min-height: 200vh;
+
+    @include media("<=SMdesktop"){
+      min-height: 100em;
+    }
+  
+    @include media("<=tablet"){
+      min-height: 80em;
+    }
+  
+    @include media("<=phoneM"){
+      min-height: 60em;
+    }
+  }
+
+  .heading {
+    width: 100%;
+    height: 20vh;
+    @include flex(row, flex-start, center);
+    padding: 15em 0;
+    z-index: 1;
+
+    @include media("<=tablet"){
+      padding: 0;
+    }
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  .content {
+    width: 100%;
+    text-align: left;
+    @include flex(column, flex-start, center);
+    // margin: 10.5em 0;
+
+    @include media("<=tablet"){
+      margin: 5em 0;
+    }
+
+    @include media("<=phoneL"){
+      min-height: 0;
+    }
+
+    @include media("<=phoneL") {
+      padding-top: 3em;
+    }
+
+    p {
+      width: 50vw;
+      color: black;
+      font-weight: 450;
+
+      @include media("<=tablet"){
+        width: 100%;
+      }
+
+      @include media("<=phoneL"){
+        width: 100%;
+      }
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}

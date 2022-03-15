@@ -1,0 +1,287 @@
+@use '../../sass/abstracts' as *;
+
+// .projects {
+//   min-height: 100vh;
+//   margin: 10.5em 0;
+//   overflow: hidden;
+
+//   svg {
+//     width: 100%;
+//     height: 100%;
+//   }
+  
+//   .lamp {
+//     width: calc(35 * 1vw);
+//     position: absolute;
+//     top: 1%;
+//     left: -3%;
+//     z-index: -1;
+
+//     @include media("<=tablet"){
+//       top: -1%;
+//     }
+
+//     @include media("<=phoneL"){
+//       width: 20em;
+//       top: -1%;
+//     }
+
+//     @include media("<=phone"){
+//       width: 15em;
+//       top: 2%;
+//     }
+//   }
+
+//   .gear-medium {
+//     width: calc(12 * 1vw);
+//     position: absolute;
+//     top: 5%;
+//     right: 10vw;
+
+//     @include media("<=tablet"){
+//       top: 3%;
+//     }
+
+//     @include media("<=phoneL"){
+//       width: 8em;
+//     }
+
+//     @include media("<=phone"){
+//       width: 5em;
+//       top: 10%;
+//     }
+//   }
+
+//   .gear-small {
+//     width: calc(9 * 1vw);
+//     position: absolute;
+//     top: 6%;
+//     right: 50%;
+
+//     @include media("<=tablet"){
+//       top: 8%;
+//     }
+
+//     @include media("<=phoneL"){
+//       top: 15%;
+//       right: 40%;
+//     }
+//   }
+
+//   .gear-mini {
+//     width: calc(6 * 1vw);
+//     position: absolute;
+//     top: 25%;
+//     right: 60%;
+//   }
+
+//   .gear-micro {
+//     width: calc(3 * 1vw);
+//     position: absolute;
+//     top: 30%;
+//     right: 22%;
+//   }
+
+//   .tools-medium {
+//     width: calc(12 * 1vw);
+//     position: absolute;
+//     bottom: 20%;
+//     right: 30%;
+//   }
+
+//   .tools-micro {
+//     width: calc(3 * 1vw);
+//     position: absolute;
+//     bottom: 35%;
+//     left: 13.5%;
+//   }
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   @include media("<=tablet"){
+//     margin: 0;
+//   }
+
+.thumbnail {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  margin-bottom: 20em;
+  z-index: 1;
+  position: relative;
+
+  @include media("<=tablet"){
+    margin-bottom: 10em;
+  }
+
+  .thumbnail-outer {
+    width: calc(55 * 1vw);
+    height: calc(30 * 1vw);
+    box-sizing: border-box;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, $purple, $red);
+    border-image-slice: 1;
+    position: relative;
+
+    @include media("<=tablet"){
+      width: 100%;
+      height: calc(45 * 1vw);
+    }
+    
+    @include media("<=phoneL"){
+      height: calc(60 * 1vw);
+    }
+
+    &:hover > .thumbnail-inner{
+      top: 0;
+      left: 0;
+      transition: all 0.35s ease-in-out;
+    }
+  }
+
+  .thumbnail-inner {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transition: all 0.35s ease-in-out;
+    overflow: hidden;
+
+    @include media("<=tablet"){
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $dark-blue; 
+      opacity: 85%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail-wrapper {
+      @include flex(row, center, center);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 4em;
+      gap: 10px;
+
+      @include media("<=tablet"){
+        @include flex(column, flex-start, center);
+        padding: 1em;
+      }
+    }
+
+    .thumbnail-title {
+      flex: 1;
+      color: white;
+      @include flex(column, center, flex-start);
+      flex-wrap: wrap;
+      z-index: 1;
+
+      h5 {
+        font-weight: 500;
+      }
+
+      @include media("<=tablet"){
+        align-items: center;
+        flex: 0;
+      }
+    }
+
+    .thumbnail-links {
+      z-index: 1;
+      @include flex(column, center, flex-end);
+
+      @include media("<=tablet"){
+        flex: 1;
+        width: 80%;
+        @include flex(row, space-around, center);
+      }
+
+      @include media("<=phoneL"){
+        width: 100%;
+      }
+
+      svg {
+        width: inherit;
+      }
+      
+      li {
+        margin: 2em 0;
+        transition: transform 0.35s cubic-bezier(0.68,-0.55, 0.27, 1.4);
+
+        @include media("<=tablet"){
+          margin: 0;
+
+          &:nth-child(2){
+            position: relative;
+            top: 8vw;
+
+            @include media("<=phoneL"){
+              top: 2rem;
+            }
+          }
+        }
+
+        @include hover-supported {
+          &:hover {
+            transform: translateX(-10px);
+          }
+        }
+      }
+
+      a {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $white;
+        @include flex(row, center, center);
+
+        @include media("<=tablet"){
+          @include flex(column, center, center);
+        }
+      }
+
+      h6{
+        font-weight: 400;
+
+        @include media("<=tablet"){
+          order: 1;
+        }
+      }
+
+      .icon {
+        margin-left: 2rem;
+        font-size: clamp(2rem, 4vw, 10rem);
+
+        @include media("<=tablet"){
+          font-size: 4rem;
+          margin-left: 0rem;
+          margin-bottom: .5rem;
+        }
+
+        @include media("<=phoneL"){
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

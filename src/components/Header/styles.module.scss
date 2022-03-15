@@ -1,0 +1,7 @@
+@use "../../sass/abstracts" as *;
+
+.header {
+  min-height: $header-height;
+  @include grid(8vw);
+  align-content: center;
+}
