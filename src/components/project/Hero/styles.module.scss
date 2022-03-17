@@ -1,0 +1,76 @@
+@use '../../../sass/abstracts/' as *;
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  @include grid(8vw);
+
+  &-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to bottom, $dark-blue, transparent);
+    z-index: 1;
+  }
+
+  &-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, $dark-blue, transparent);
+    z-index: 1;
+  }
+
+  .header {
+    min-height: 40vh;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    line-height: 15em;
+
+    h1 {
+      padding: 1rem 0;
+      font-size: clamp(6rem, 15vw, 17rem) !important;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-style: italic;
+    }
+  }
+
+  .main {
+    @include flex(row, center, flex-end);
+    z-index: 2;
+    position: relative;
+    
+    p {
+      text-align: center;
+      padding: 2em 0;
+    }
+  }
+
+  .bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(47, 46, 65, 0.80);
+      z-index: 1;
+    }
+  }
+}

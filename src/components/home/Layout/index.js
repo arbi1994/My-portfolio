@@ -4,7 +4,7 @@ import * as styles from './styles.module.scss'
 import Header from '../Header/index'
 import Navbar from '../Navbar/index'
 import Footer from '../Footer/index'
-import ScrollTracker from "../ScrollTracker/index";
+import ScrollTracker from "../../ScrollTracker/index";
 
 const layout = ({ children }) => {
   return (

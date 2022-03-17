@@ -4,9 +4,9 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 // styles
 import * as styles from './styles.module.scss'
 // images
-import images from '../../data/project-images'
+import images from '../../../data/project-images'
 // hooks
-import useWindowSize from '../../hooks/useWindowSize'
+import useWindowSize from '../../../hooks/useWindowSize'
 
 const BackgroundImages = ({ data, imagesData }) => {
   const width = useWindowSize()

@@ -5,10 +5,10 @@ import { useTransition, animated } from 'react-spring';
 // Styles
 import * as styles from './styles.module.scss';
 // logo
-import logo from '../../images/logo.svg';
+import logo from '../../../images/logo.svg';
 // menu icons
-import burgerIcon from '../../images/burger-icon.svg';
-import closeIcon from '../../images/close-icon.svg';
+import burgerIcon from '../../../images/burger-icon.svg';
+import closeIcon from '../../../images/close-icon.svg';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)

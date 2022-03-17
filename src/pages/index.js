@@ -1,15 +1,14 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 // global styles
 import "../sass/index.scss";
 // Components
-import Layout from "../components/Layout";
-import Hero from '../components/Hero/index'
+import Layout from "../components/home/Layout";
+import Hero from '../components/home/Hero/index'
 // import Seo from "../components/seo"
-import Section from "../components/Section"
+import Section from "../components/home/Section"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <Hero />
     <Section />

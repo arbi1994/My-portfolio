@@ -8,7 +8,7 @@ import BackgroundImages from '../BackgroundImages/BackgroundImages'
 import Paragraph from '../Paragraph/index'
 import Contacts from '../Contacts/index'
 // hooks
-import useSectionIdentifier from '../../hooks/useSectionIdentifier';
+import useSectionIdentifier from '../../../hooks/useSectionIdentifier';
 
 const Section = () => {
   const projectRef = useSectionIdentifier(document.getElementById('box-2'))

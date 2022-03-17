@@ -2,7 +2,7 @@ import React from 'react'
 // styles
 import * as styles from './styles.module.scss'
 // helper functions
-import { getCurrentYear } from '../../helpers/getDate';
+import { getCurrentYear } from '../../../helpers/getDate';
 
 const Footer = () => {
   return (

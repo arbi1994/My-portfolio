@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './styles.module.scss'
 // Components
-import HomeBlob from '../../assets/HomeBlob'
+import HomeBlob from '../../../assets/HomeBlob'
 
 const Header = ({ children }) => {
   return (
