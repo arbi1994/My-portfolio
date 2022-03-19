@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import * as styles from './styles.module.scss'
 // Components
 import Hero from '../components/project/Hero/index'
+import Idea from '../components/project/Idea/index'
+import BackButton from '../components/project/BackButton/index'
 
 const Project = ({ data }) => {
   const { 
@@ -15,12 +17,15 @@ const Project = ({ data }) => {
 
   return (
     <div className={styles.layout}>
+      <BackButton />
       <Hero 
         title={title} 
         subtitle={subtitle} 
         introduction={introduction}
         featureImage={featureImage}
       />
+      <Idea />
+      <BackButton />
     </div>
   )
 }

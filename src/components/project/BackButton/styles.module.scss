@@ -1,0 +1,28 @@
+@use '../../../sass/abstracts/' as *;
+
+.button {
+  width: 100%;
+  height: 10vh;
+  @include flex(row, center, center);
+
+  a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: white;
+    font-size: clamp(1.6rem, 1.5vw, 4rem);
+    @include flex(row, center, center);
+
+    svg {
+      width: 3rem;
+      margin-right: 1rem;
+      @include transition(width);
+
+      &:hover {
+        width: 5rem;
+        @include transition(width)
+      }
+    }
+  }
+}

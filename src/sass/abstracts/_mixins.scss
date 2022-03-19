@@ -12,6 +12,10 @@
   align-items: $align-items;
 }
 
+@mixin transition($param) {
+  transition: $param 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.4);
+}
+
 @mixin hover-supported {
   @media not all and (pointer: coarse){
     &:hover {

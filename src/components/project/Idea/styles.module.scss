@@ -1,0 +1,98 @@
+@use '../../../sass/abstracts/' as *;
+
+.idea {
+  position: relative;
+  
+  @include media("<=phoneL") {
+    background: rgb(0, 0, 0, 0.2);
+  }
+
+  .header {
+    padding: 2em 0;
+
+    h1{
+      font-weight: 600;
+      padding-left: 1em;
+      
+      @include media("<=phoneL"){
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+
+    hr {
+      border: 2px solid white;
+      background: white;
+      height: 5px;
+      width: 30em;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      @include media("<=phoneL"){
+        display: none;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5vw;
+    @include flex(row, center, center);
+    gap: 2em;
+
+    @include media("<=tablet"){
+      min-height: 40vh;
+    }
+
+    @include media("<=phoneL") {
+      min-height: 30vh;
+      padding: 0 2vw;
+    }
+
+    .paragraph {
+      flex: 1;
+      @include flex(row, center, center);
+      padding: 2em 0;
+      z-index: 1;
+    }
+
+    .image {
+      flex: 1;
+      z-index: 1;
+
+      @include media("<tablet"){
+        display: none;
+      }
+    }
+  }
+
+  .blob {
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+
+    @include media("<=tablet"){
+      overflow-x: hidden;
+      left: -5%;
+    }
+
+    @include media("<=phoneL"){
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      z-index: -2;
+    
+      @include media("<=tablet"){
+        width: 200%;
+        transform: translateX(-25%);
+      }
+  
+      @include media("<=phoneL"){
+        transform: translateX(-35%);
+      }
+    }
+  }
+}

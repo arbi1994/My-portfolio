@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 // Styles
 import * as styles from './styles.module.scss'
 // Components
-import ScrollDownArrow from '../../../assets/ScrollDownArrow'
+import ScrollDownArrow from '../../../assets/hero-section/ScrollDownArrow'
 // hooks
 import useSectionIdentifier from '../../../hooks/useSectionIdentifier';
 

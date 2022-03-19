@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { animated, useSpring, config } from 'react-spring';
 // Styles
-import * as styles from './styles.module.scss';
+import * as styles from '../styles.module.scss';
 
 const HomeBlob = () => {
   const [active, setActive] = useState(false)

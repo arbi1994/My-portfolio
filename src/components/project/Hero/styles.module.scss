@@ -3,7 +3,18 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  @include grid(8vw);
+  padding: 0 5vw;
+  @include flex(column, flex-start, center);
+  position: relative;
+  overflow: hidden;
+
+  @include media("<=tablet"){
+    min-height: 50vh;
+  }
+
+  @include media("<=phoneL") {
+    padding: 0 2vw;
+  }
 
   &-top {
     position: absolute;
@@ -29,17 +40,30 @@
     min-height: 40vh;
     text-align: center;
     width: 100%;
+    position: relative;
     z-index: 2;
-    line-height: 15em;
+
+    @include media("<=tablet"){
+      min-height: 30vh;
+    }
 
     h1 {
       padding: 1rem 0;
-      font-size: clamp(6rem, 15vw, 17rem) !important;
+      font-size: clamp(6rem, 13vw, 17rem) !important;
       font-weight: 700;
+      line-height: 15rem;
+      
+      @include media("<=tablet"){
+        line-height: 8rem;
+      }
     }
 
     h2 {
       font-style: italic;
+
+      @include media("<=phoneL"){
+        padding-top: 2em;
+      }
     }
   }
 
@@ -51,6 +75,11 @@
     p {
       text-align: center;
       padding: 2em 0;
+
+           
+      @include media("<=phoneL"){
+        text-align: left;
+      }
     }
   }
 
@@ -69,8 +98,26 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(47, 46, 65, 0.80);
+      background: rgba(47, 46, 65, 0.95);
       z-index: 1;
+    }
+  }
+
+  .blob {
+    display: none;
+
+    img {
+      width: auto;
+      transform: translateY(10px);
+    }
+
+    @include media("<=phoneL") {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateX(-30%);
     }
   }
 }
