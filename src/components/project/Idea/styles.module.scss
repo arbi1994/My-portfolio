@@ -2,29 +2,29 @@
 
 .idea {
   position: relative;
+  min-height: 100vh;
   
-  @include media("<=phoneL") {
+  @include media("<=tablet"){
+    min-height: 40vh;
+  }
+
+  @include media("<tablet"){
+    min-height: 40vh;
     background: rgb(0, 0, 0, 0.2);
   }
 
-  .header {
-    padding: 2em 0;
+  @include media("<=phoneL") {
+    min-height: 30vh;
+  }
 
-    h1{
-      font-weight: 600;
-      padding-left: 1em;
-      
-      @include media("<=phoneL"){
-        text-align: center;
-        padding-left: 0;
-      }
-    }
+  header {
+    padding: 10em 0 2em 0;
 
     hr {
       border: 2px solid white;
       background: white;
       height: 5px;
-      width: 30em;
+      width: 100%;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
 
@@ -36,9 +36,9 @@
 
   main {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     padding: 0 5vw;
-    @include flex(row, center, center);
+    @include flex(row, center, flex-start);
     gap: 2em;
 
     @include media("<=tablet"){
@@ -60,6 +60,7 @@
     .image {
       flex: 1;
       z-index: 1;
+      transform: translateX(10%);
 
       @include media("<tablet"){
         display: none;
@@ -69,12 +70,12 @@
 
   .blob {
     position: absolute;
-    bottom: 0;
-    left: -5%;
+    bottom: -0.5%;
+    left: 0%;
+    width: 100%;
 
     @include media("<=tablet"){
       overflow-x: hidden;
-      left: -5%;
     }
 
     @include media("<=phoneL"){

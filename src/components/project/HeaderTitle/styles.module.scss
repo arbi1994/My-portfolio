@@ -1,0 +1,22 @@
+@use '../../../sass/abstracts/' as *;
+
+header {
+  min-height: 18vh;
+  position: relative;
+
+  .title {
+    height: 100%;
+    // width: 45em;
+    position: absolute;
+    top: 0;
+
+    h1{
+      font-weight: 600;
+      
+      @include media("<=phoneL"){
+        text-align: center;
+        padding-right: 0;
+      }
+    }
+  }
+}

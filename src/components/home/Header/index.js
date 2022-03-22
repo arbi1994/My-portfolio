@@ -5,10 +5,12 @@ import HomeBlob from '../../../assets/hero-section/HomeBlob'
 
 const Header = ({ children }) => {
   return (
-    <header id="home" className={styles.header}>
-      { children }
+    <> 
+      <header id="home" className={styles.header}>
+        { children }
+      </header>
       <HomeBlob />
-    </header>
+    </>
   )
 }
 

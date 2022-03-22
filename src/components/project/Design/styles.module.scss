@@ -1,0 +1,26 @@
+@use '../../../sass/abstracts/' as *;
+
+.design {
+  min-height: 100vh;
+  background: $darker-blue;
+  padding: 10em 0;
+  
+  .header {
+    padding: 10em 0 2em 0;
+  }
+
+  hr {
+    border: 2px solid white;
+    background: white;
+    height: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include media("<=phoneL"){
+      display: none;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { graphql } from "gatsby"
 // Styles
 import * as styles from './styles.module.scss'
@@ -6,6 +6,7 @@ import * as styles from './styles.module.scss'
 import Hero from '../components/project/Hero/index'
 import Idea from '../components/project/Idea/index'
 import BackButton from '../components/project/BackButton/index'
+import Design from '../components/project/Design/index'
 
 const Project = ({ data }) => {
   const { 
@@ -15,6 +16,7 @@ const Project = ({ data }) => {
     featureImage
   } = data.mdx.frontmatter
 
+ 
   return (
     <div className={styles.layout}>
       <BackButton />
@@ -25,6 +27,7 @@ const Project = ({ data }) => {
         featureImage={featureImage}
       />
       <Idea />
+      <Design />
       <BackButton />
     </div>
   )
