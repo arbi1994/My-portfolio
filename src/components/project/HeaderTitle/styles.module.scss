@@ -1,22 +1,49 @@
 @use '../../../sass/abstracts/' as *;
 
-header {
-  min-height: 18vh;
+.header {
+  min-height: 11em;
   position: relative;
+  padding: 5em 0 2em 0;
+  margin-bottom: 4em;
+  z-index: 2;
+
+  @include media("<=SMdesktop") {
+    min-height: 8em;
+  }
+
+  @include media("<=phoneL") {
+    margin-bottom: 0;
+    padding: 0;
+  }
 
   .title {
     height: 100%;
-    // width: 45em;
     position: absolute;
     top: 0;
+
+    @include media("<=phoneL"){
+      position: inherit;
+    }
 
     h1{
       font-weight: 600;
       
       @include media("<=phoneL"){
         text-align: center;
-        padding-right: 0;
       }
+    }
+  }
+
+  hr {
+    border: 2px solid white;
+    background: white;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include media("<=phoneL"){
+      display: none;
     }
   }
 }

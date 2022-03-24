@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // styles
 import * as styles from './styles.module.scss'
 // images
@@ -7,7 +7,7 @@ import guy from '../../../assets/project/idea-section/idea-guy.svg'
 // components
 import HeaderTitle from '../HeaderTitle/index'
 
-const Idea = () => {
+const Idea = ({ idea }) => {
   const title = "Idea"
 
   return (
@@ -15,9 +15,7 @@ const Idea = () => {
       <HeaderTitle title={title} />
       <main>
         <div className={styles.paragraph}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! </p>
+          <p>{idea}</p>
         </div>
         <div className={styles.image}><img alt="guy" src={guy} /></div>
       </main>

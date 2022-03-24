@@ -1,0 +1,128 @@
+@use '../../../sass/abstracts/' as *;
+
+.container {
+  width: 100%;
+  margin-bottom: 15em;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 1;
+
+  @include media("<=tablet") {
+    margin-bottom: 0em;
+  }
+
+  &-header {
+    text-align: center;
+    padding: 5em 0 8em 0;
+    letter-spacing: 2px;
+
+    @include media("<=tablet") {
+      padding: 5em 0;
+    }
+  }
+
+  &-content {
+    padding: 0 0 2em 0;
+    
+    ul {
+      width: 100%;
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 10em;
+
+      @include media("<=tablet") {
+        gap: 5em;
+      }
+
+      @include media("<=phoneL") {
+        gap: 2em;
+      }
+
+      li {
+        text-align: center;
+        @include flex(column, space-between, center);
+        z-index: 1;
+
+        span {
+          width: 5em;
+          height: 5em;
+          border-radius: 50%;
+          margin-bottom: 1em;
+          position: relative;
+          border: 2px solid white;
+        }
+
+        h5 {
+          font-weight: 600 !important;
+          letter-spacing: 5px;
+          margin-bottom: 0.5em;
+          text-transform: uppercase;
+          height: 1em;
+        }
+
+        h5 {
+          font-weight: 500;
+        }
+      }
+
+      .icon {
+        // color: $darker-blue;
+
+        dl {
+          color: white;
+          margin-top: .5em;
+          letter-spacing: 2.5px;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .constraints-wrapper {
+      @include flex(column, center, flex-start);
+      gap: 2em;
+
+      @include media("<=phoneL") {
+        padding-left: 1em;
+      }
+
+      .constraints-list {
+        font-size: clamp(1.6rem, 1.5vw, 4rem);
+        text-align: left;
+        display: list-item;
+
+        @include media("<=tablet") {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: -50px;
+    z-index: -1;
+
+    @include media("<tablet") {
+      display: none;
+    }
+
+    img {
+      width: 40em;
+      
+      @include media("<=tablet") {
+        width: 30em;
+      }
+    }
+  }
+
+  .left {
+    left: 5%;
+  }
+
+  .right {
+    right: 5%;
+  }
+}

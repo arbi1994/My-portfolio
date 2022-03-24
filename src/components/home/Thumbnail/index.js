@@ -49,7 +49,7 @@ const Thumbnail = ({ data }) => {
                             : <a
                                 href={link.url}
                                 target='_blank'
-                                rel='nofollow noopener'
+                                rel='nofollow noopener noreferrer'
                               >
                                 <h6>{link.label}</h6>
                                 {setIcon(link.label)}

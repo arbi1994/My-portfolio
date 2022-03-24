@@ -1,5 +1,4 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 // global styles
 import "../sass/index.scss";
 // Components
@@ -16,18 +15,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-// export const pageQuery = graphql`
-//   {
-//     hero: allMdx {
-//       edges {
-//         node {
-//           frontmatter {
-//             subtitle
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

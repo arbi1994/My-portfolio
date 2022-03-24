@@ -3,6 +3,7 @@
 .idea {
   position: relative;
   min-height: 100vh;
+  padding-bottom: 10em;
   
   @include media("<=tablet"){
     min-height: 40vh;
@@ -15,24 +16,13 @@
 
   @include media("<=phoneL") {
     min-height: 30vh;
+    padding-bottom: 5em;
   }
 
-  header {
-    padding: 10em 0 2em 0;
-
-    hr {
-      border: 2px solid white;
-      background: white;
-      height: 5px;
-      width: 100%;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-
-      @include media("<=phoneL"){
-        display: none;
-      }
-    }
-  }
+  hr {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  } 
 
   main {
     width: 100%;
@@ -47,7 +37,6 @@
 
     @include media("<=phoneL") {
       min-height: 30vh;
-      padding: 0 2vw;
     }
 
     .paragraph {
@@ -75,6 +64,7 @@
     width: 100%;
 
     @include media("<=tablet"){
+      bottom: -0.6%;
       overflow-x: hidden;
     }
 

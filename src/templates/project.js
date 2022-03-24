@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 // Styles
 import * as styles from './styles.module.scss'
@@ -7,15 +7,22 @@ import Hero from '../components/project/Hero/index'
 import Idea from '../components/project/Idea/index'
 import BackButton from '../components/project/BackButton/index'
 import Design from '../components/project/Design/index'
+import Development from '../components/project/Development/index'
 
 const Project = ({ data }) => {
   const { 
     title, 
     subtitle, 
     introduction,
-    featureImage
+    featureImage,
+    idea,
+    typography,
+    colors,
+    pages,
+    technologies,
+    constraints,
+    summary
   } = data.mdx.frontmatter
-
  
   return (
     <div className={styles.layout}>
@@ -26,8 +33,17 @@ const Project = ({ data }) => {
         introduction={introduction}
         featureImage={featureImage}
       />
-      <Idea />
-      <Design />
+      <Idea idea={idea}/>
+      <Design 
+        typography={typography}
+        colors={colors}
+        pages={pages}
+      />
+      <Development 
+        technologies={technologies} 
+        constraints={constraints}
+        summary={summary}
+      />
       <BackButton />
     </div>
   )
@@ -48,6 +64,21 @@ export const query = graphql`
             gatsbyImageData(quality: 100, webpOptions: {quality: 100})
           }
         }
+        idea
+        typography {
+          font
+        }
+        colors {
+          hexCode
+        }
+        pages {
+          page
+        }
+        technologies {
+          name
+        }
+        constraints
+        summary
       }
     }
   }

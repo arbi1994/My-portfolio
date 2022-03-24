@@ -6,7 +6,7 @@
   font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6, a, button, p{
+h1, h2, h3, h4, h5, h6, a, button, p, li{
   font-family: $montserrat;
 }
 
@@ -24,7 +24,7 @@ h3, h4, h5 {
 }
 
 li {
-  list-style: none;
+  // list-style: none;
 }
 
 a {
@@ -49,10 +49,11 @@ $font-sizes: (
   h2: clamp(4rem, 5vw, 10rem),
   h3: clamp(2.4rem, 4.5vw, 8rem),
   h4: clamp(2.2rem, 2.5vw, 4rem),
-  h5: clamp(1.4rem, 2vw, 2.5rem),
+  h5: clamp(1.6rem, 2vw, 2.5rem),
   h6: clamp(1.2rem, 1.5vw, 4rem),
   a: clamp(1.4rem, 1.5vw, 3rem),
   p: clamp(1.6rem, 1.5vw, 4rem),
+  dl: clamp(1.6rem, 1.5vw, 4rem),
 );
 
 @each $tag, $size in $font-sizes {

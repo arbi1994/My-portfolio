@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import * as styles from '../Components/ScrollTracker/styles.module.scss';
 
 const useSectionIdentifier = (el) => {
-  const { inView, ref, entry } = useInView({
+  const { inView, ref } = useInView({
     rootMargin: '-300px'
   });
 

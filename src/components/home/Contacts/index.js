@@ -40,7 +40,7 @@ const Contacts = ({ data }) => {
         <h3>{data.subtitle}</h3>
       </div>
       <div className={styles.contactLinks}>
-        <div className={styles.linksWrapper}>
+        <div>
           {renderedLinks}
         </div>
       </div>

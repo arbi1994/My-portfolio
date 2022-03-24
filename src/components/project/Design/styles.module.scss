@@ -3,24 +3,33 @@
 .design {
   min-height: 100vh;
   background: $darker-blue;
-  padding: 10em 0;
-  
-  .header {
-    padding: 10em 0 2em 0;
+  padding-bottom: 10em;
+  position: relative;
+
+  @include media("<=phoneL") {
+    padding-bottom: 5em;
   }
 
   hr {
-    border: 2px solid white;
-    background: white;
-    height: 5px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  } 
 
-    @include media("<=phoneL"){
-      display: none;
+  .blob {
+    position: absolute;
+    width: 100%;
+    bottom: -0.3%;
+    left: 0;
+
+    @include media("<tablet") {
+      bottom: -0.5%;
+      z-index: 0;
+      transform: translateX(-30%);
+      width: 110em;
+    }
+
+    @include media("<phone"){
+      transform: translateX(-40%);
     }
   }
 }

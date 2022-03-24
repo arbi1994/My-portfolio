@@ -47,7 +47,7 @@ const Hero = () => {
           ref={heroRef}
         >
           <div className={styles.heroWrapper}>
-            <div className={styles.header}>
+            <div>
               <animated.h2 style={headerTwoStyle}>{data.allMdx.edges[0].node.frontmatter.title}</animated.h2>
               <animated.h4 style={headerFourStyle}>{data.allMdx.edges[0].node.frontmatter.subtitle}</animated.h4>
             </div>
