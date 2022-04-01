@@ -3,7 +3,7 @@
 .design {
   min-height: 100vh;
   background: $darker-blue;
-  padding-bottom: 10em;
+  padding-bottom: 25em;
   position: relative;
 
   @include media("<=phoneL") {

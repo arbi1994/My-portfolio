@@ -11,6 +11,7 @@ import Container from '../Container/index'
 import useWindowSize from '../../../hooks/useWindowSize'
 
 const Design = ({ 
+  id, 
   typography, 
   colors, 
   pages, 
@@ -23,9 +24,9 @@ const Design = ({
     <section className={styles.design}>
       <HeaderTitle title={title} />
       <main>
-        <Container typography={typography} />
-        <Container colors={colors} />
-        <Container pages={pages} />
+        <Container id={id} typography={typography} />
+        <Container id={id} colors={colors} />
+        <Container id={id} pages={pages} />
       </main>
       <div className={styles.blob}>
         <img alt="blob" src={width < 768 ? blobMobile : blob} />

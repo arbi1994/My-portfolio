@@ -1,9 +1,13 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
+// hooks 
+import useWindowSize from '../../hooks/useWindowSize';
 
 const GearMini = () => {
+  const width = useWindowSize()
+
   return (
-    <Parallax speed={5}>
+    <Parallax speed={width <= 768 ? 0 : 5}>
       <svg 
         width="71" 
         height="67" 

@@ -17,6 +17,7 @@ import pagesImg from '../../../assets/project/pages-img.svg'
 import useWindowSize from '../../../hooks/useWindowSize'
 
 const Container = ({ 
+  id,
   typography, 
   colors, 
   pages,
@@ -47,7 +48,7 @@ const Container = ({
   const renderedContent = () => {
     if (typography) return typography.map(({font}) => {
       return (
-        <li>
+        <li key={`${id + font}`} font={`${id + font}`}>
           <h5 style={{fontFamily: `${font}`}}>abcdefghijk</h5>
           <dl style={{fontFamily: `${font}`}}>{font}</dl>
         </li>
@@ -56,7 +57,7 @@ const Container = ({
 
     if (colors) return colors.map(({hexCode}) => {
       return (
-        <li>
+        <li key={`${id + hexCode}`}>
           <span style={{background: `#${hexCode}`}}></span>
           <dl>#{hexCode}</dl>
         </li>
@@ -65,7 +66,7 @@ const Container = ({
 
     if (pages) return pages.map(({page}) => {
       return (
-        <li>
+        <li key={`${id + page}`}>
           <h5>{page !== "home" ? `/${page}` : page}</h5>
         </li>
       )
@@ -73,7 +74,7 @@ const Container = ({
 
     if (technologies) return technologies.map(({name}) => {
       return (
-        <li className={styles.icon}>
+        <li key={`${id + name}`} className={styles.icon}>
           {renderIcons(name)}
           <dl>{name}</dl>
         </li>
@@ -82,7 +83,7 @@ const Container = ({
 
     if (constraints) return constraints.map(constraint => {
       return (
-        <li className={styles.constraintsList}>
+        <li key={`${id + constraint}`} className={styles.constraintsList}>
           {constraint}
         </li>
       )

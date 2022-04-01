@@ -14,18 +14,11 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
-        // gatsbyRemarkPlugins: [
-        //   {
-        //     resolve: `gatsby-remark-images`,
-        //     options: {
-        //       maxWidth: 1200,
-        //     }
-        //   }
-        // ]
       }
     },
     {

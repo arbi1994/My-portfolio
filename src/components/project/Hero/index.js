@@ -1,5 +1,6 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
+//styles
 import * as styles from './styles.module.scss'
 // images
 import blob from '../../../assets/project/hero-section/blob.svg'

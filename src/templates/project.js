@@ -25,7 +25,7 @@ const Project = ({ data }) => {
   } = data.mdx.frontmatter
  
   return (
-    <div className={styles.layout}>
+    <div className={styles.projectLayout}>
       <BackButton />
       <Hero 
         title={title} 
@@ -35,6 +35,7 @@ const Project = ({ data }) => {
       />
       <Idea idea={idea}/>
       <Design 
+        id={data.mdx.id}
         typography={typography}
         colors={colors}
         pages={pages}
@@ -54,7 +55,7 @@ export default Project
 export const query = graphql`
   query ($id: String!) {
     mdx(id: {eq: $id}) {
-      rawBody
+      id
       frontmatter {
         title
         subtitle

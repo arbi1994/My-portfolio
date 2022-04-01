@@ -1,4 +1,5 @@
 import React from 'react';
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby";
 import { IconContext } from "react-icons";
@@ -42,10 +43,15 @@ const Thumbnail = ({ data }) => {
                       >
                         <li>
                           {link.label === "Creation" 
-                            ? <Link to={link.url}>
+                            ? <AniLink 
+                                paintDrip 
+                                to={link.url} 
+                                duration={0.5} 
+                                hex="#2F2E41"
+                              >
                                 <h6>{link.label}</h6>
                                 {setIcon(link.label)}
-                              </Link> 
+                              </AniLink> 
                             : <a
                                 href={link.url}
                                 target='_blank'

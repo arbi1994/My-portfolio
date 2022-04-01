@@ -23,6 +23,12 @@ const Hero = () => {
     delay: 1000,
   })
 
+  const headerFiveStyle = useSpring({
+    to: { opacity: 1, y: 20 },
+    from: { opacity: 0, y: 0 },
+    delay: 2500,
+  })
+
   return (
     <StaticQuery
       query={graphql`
@@ -54,8 +60,8 @@ const Hero = () => {
             <div className={styles.imgContainer}>
               <ScrollDownArrow />
             </div>
-            <div style={{width: '100%', textAlign: 'center'}}>
-              <h5>scroll down</h5>
+            <div style={{minHeight: '5em', width: '100%', textAlign: 'center'}}>
+              <animated.h5 style={headerFiveStyle}>scroll down</animated.h5>
             </div>
           </div>
         </section>

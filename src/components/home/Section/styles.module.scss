@@ -5,8 +5,12 @@
   width: 100%;
   min-height: 100vh;
   color: $dark-blue;
-  overflow-x: hidden;
   position: relative;
+
+  @media screen and (min-width: 820px) and (min-height: 1180px) {
+    min-height: 0;
+  }
+
 
   @include media("<=phoneL"){
     @include grid(2vw);
@@ -51,11 +55,12 @@
     // margin: 10.5em 0;
 
     @include media("<=tablet"){
-      margin: 5em 0;
+      margin: 0;
     }
 
     @include media("<=phoneL"){
       min-height: 0;
+      margin: 0;
     }
 
     @include media("<=phoneL") {

@@ -1,11 +1,20 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 // Styles
-import * as styles from '../Components/ScrollTracker/styles.module.scss';
+import * as styles from './styles.module.scss';
+//hooks
+import useWindowSize from './useWindowSize';
 
 const useSectionIdentifier = (el) => {
+  const [width, height] = useWindowSize()
+  const [rootMargin, setRootMargin] = useState(height)
+
+  useEffect(() => {
+    setRootMargin(height/2 - 0.5)
+  }, [height])
+
   const { inView, ref } = useInView({
-    rootMargin: '-300px'
+    rootMargin: `-${rootMargin}px`,
   });
 
   function detectSection(){

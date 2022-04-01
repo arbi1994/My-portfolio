@@ -5,7 +5,7 @@ import * as styles from './styles.module.scss'
 import useWindowSize from '../../../hooks/useWindowSize'
 
 const Header = ({ title }) => {
-  const width = useWindowSize()
+  const [width] = useWindowSize()
   const [titleLength, setTitleLenght] = useState(null)
   const [titlePos, setTitlePos] = useState(null)
   const ref = useRef()

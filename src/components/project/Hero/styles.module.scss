@@ -4,15 +4,19 @@
   width: 100%;
   min-height: 100vh;
   padding: 0 5vw 10em 5vw;
-  @include flex(column, flex-start, center);
+  @include flex(column, space-around, center);
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: 820px) and (min-height: 1180px) {
+    min-height: 0;
+  }
 
   @include media("<=tablet"){
     min-height: 50vh;
   }
 
-  &-top {
+&-top {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,7 +37,7 @@
   }
 
   .header {
-    min-height: 40vh;
+    // min-height: 40vh;
     text-align: center;
     width: 100%;
     position: relative;

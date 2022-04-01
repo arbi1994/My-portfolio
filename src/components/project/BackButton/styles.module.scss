@@ -5,6 +5,17 @@
   height: 10vh;
   @include flex(row, center, center);
 
+  @media screen and (min-width: 820px) and (min-height: 1180px) {
+    height: 5vh;
+  }
+
+  &:hover {
+    svg {
+      width: 5rem;
+      @include transition(width, 0.35s);
+    }
+  }
+
   a {
     text-decoration: none;
     width: 100%;
@@ -18,11 +29,6 @@
       width: 3rem;
       margin-right: 1rem;
       @include transition(width, 0.35s);
-
-      &:hover {
-        width: 5rem;
-        @include transition(width, 0.35s)
-      }
     }
   }
 }

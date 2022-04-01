@@ -1,12 +1,12 @@
 @use "../../sass/abstracts" as *;
 
-.container {
-  height: 15em;
-  width: 5em;
-  position: fixed;
+.scroll-tracker-container {
+  position: fixed !important;
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
+  height: 15em;
+  width: 5em;
   @include flex(column, space-between, center);
   z-index: 5;
 
@@ -20,6 +20,10 @@
     height: 100%;
     background-color: transparent;
     z-index: -1;
+
+    @media screen and (min-width: 820px) and (min-height: 1180px) {
+      display: none;
+    }
 
     @include media("<=tablet") {
       display: none;
@@ -42,6 +46,10 @@
 
     &::after {
       mix-blend-mode: difference;
+    }
+
+    @media screen and (min-width: 820px) and (min-height: 1180px) {
+      display: none;
     }
 
     @include media("<=tablet") {

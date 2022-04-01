@@ -5,7 +5,7 @@ import * as styles from './styles.module.scss';
 
 const ScrollTracker = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.scrollTrackerContainer}>
       <button aria-label="scroll to home" id="box-1" className={styles.box} onClick={() => scrollTo('#home')}></button>
       <button aria-label="scroll to projects" id="box-2" className={styles.box} onClick={() => scrollTo('#projects')}></button>
       <button aria-label="scroll to about" id="box-3" className={styles.box} onClick={() => scrollTo('#about')}></button>
