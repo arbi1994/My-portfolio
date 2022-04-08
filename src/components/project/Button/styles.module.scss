@@ -1,0 +1,23 @@
+@use '../../../sass/abstracts' as *;
+
+.emailBtn {
+  text-decoration: none;
+  border: 3px solid $white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background: transparent;
+  color: $white;
+  cursor: pointer;
+  transform: scale(1);
+  @include transition(all, 0.35s);
+  @include flex(row, center, center);
+
+  &:hover {
+    transform: scale(1.1);
+    @include transition(all, 0.35s);
+  }
+}

@@ -9,6 +9,7 @@ import HeaderTitle from '../HeaderTitle/index'
 import Container from '../Container/index'
 //hooks
 import useWindowSize from '../../../hooks/useWindowSize'
+import useSectionDetector from '../../../hooks/useSectionDetector'
 
 const Design = ({ 
   id, 
@@ -17,12 +18,12 @@ const Design = ({
   pages, 
 }) => {
   const title = "Design"
-
   const width = useWindowSize()
+  const [ref, active] = useSectionDetector()
 
   return (
-    <section className={styles.design}>
-      <HeaderTitle title={title} />
+    <section ref={ref} className={styles.design}>
+      <HeaderTitle title={title} active={active} />
       <main>
         <Container id={id} typography={typography} />
         <Container id={id} colors={colors} />

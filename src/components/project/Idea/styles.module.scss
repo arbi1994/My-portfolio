@@ -16,7 +16,7 @@
 
   @include media("<=phoneL") {
     min-height: 30vh;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
   }
 
   hr {
@@ -37,12 +37,12 @@
 
     @include media("<=phoneL") {
       min-height: 30vh;
+      padding-top: 2em;
     }
 
     .paragraph {
       flex: 1;
       @include flex(row, center, center);
-      padding: 2em 0;
       z-index: 1;
     }
 

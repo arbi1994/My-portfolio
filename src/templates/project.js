@@ -8,6 +8,7 @@ import Idea from '../components/project/Idea/index'
 import BackButton from '../components/project/BackButton/index'
 import Design from '../components/project/Design/index'
 import Development from '../components/project/Development/index'
+import Banner from '../components/project/Banner/index'
 
 const Project = ({ data }) => {
   const { 
@@ -45,6 +46,7 @@ const Project = ({ data }) => {
         constraints={constraints}
         summary={summary}
       />
+      <Banner />
       <BackButton />
     </div>
   )

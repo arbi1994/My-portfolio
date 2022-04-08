@@ -6,13 +6,16 @@ import blob from '../../../assets/project/idea-section/blob.svg'
 import guy from '../../../assets/project/idea-section/idea-guy.svg'
 // components
 import HeaderTitle from '../HeaderTitle/index'
+//hooks
+import useSectionDetector from '../../../hooks/useSectionDetector'
 
 const Idea = ({ idea }) => {
   const title = "Idea"
+  const [ref, active] = useSectionDetector()
 
   return (
-    <section className={styles.idea}>
-      <HeaderTitle title={title} />
+    <section ref={ref} className={styles.idea}>
+      <HeaderTitle title={title} active={active} />
       <main>
         <div className={styles.paragraph}>
           <p>{idea}</p>

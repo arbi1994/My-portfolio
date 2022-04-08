@@ -1,0 +1,19 @@
+<motion.svg 
+  width="284" 
+  height="227" 
+  viewBox="0 0 284 227" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+        initial="hidden" 
+      animate="visible"
+      variants={pathVariants}
+>
+  <motion.path 
+    d="M2 224.993C26.1739 155.331 115.617 16.0059 280 16.0059M268.5 2L282.5 16L268.5 30" 
+    stroke="#F2F2F2" 
+    stroke-width="3" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+           variants={pathVariants}
+  />
+</motion.svg>

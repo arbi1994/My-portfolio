@@ -16,6 +16,10 @@
     min-height: 50vh;
   }
 
+  @include media("<=phoneL"){
+    padding: 0;
+  }
+
 &-top {
     position: absolute;
     top: 0;
@@ -47,6 +51,10 @@
       min-height: 40vh;
     }
 
+    @include media("<=phoneL"){
+      min-height: 0;
+    }
+
     h1 {
       padding: 1rem 0;
       font-size: clamp(6rem, 13vw, 17rem) !important;
@@ -56,13 +64,17 @@
       @include media("<=tablet"){
         line-height: 8rem;
       }
+
+      @include media("<=phoneL"){
+        line-height: 6rem;
+      }
     }
 
-    h2 {
+    h3 {
       font-style: italic;
 
       @include media("<=phoneL"){
-        padding-top: 2em;
+        padding-top: 0.5em;
       }
     }
   }
@@ -71,6 +83,10 @@
     @include flex(row, center, flex-end);
     z-index: 2;
     position: relative;
+
+    @include media("<=phoneL"){
+      padding: 1em 5vw 2em 5vw;
+    }
     
     p {
       text-align: center;

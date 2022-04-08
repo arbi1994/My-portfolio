@@ -27,9 +27,11 @@
 
     h1{
       font-weight: 600;
+      padding: 0 1rem;
       
       @include media("<=phoneL"){
         text-align: center;
+        padding: 0;
       }
     }
   }

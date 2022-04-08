@@ -6,6 +6,7 @@ import HeaderTitle from '../HeaderTitle/index'
 import Container from '../Container/index'
 //hooks 
 import useWindowSize from '../../../hooks/useWindowSize'
+import useSectionDetector from '../../../hooks/useSectionDetector'
 
 const Development = ({ 
   technologies, 
@@ -14,10 +15,11 @@ const Development = ({
 }) => {
   const width = useWindowSize()
   const title = `${width <= 425 ? 'Dev' : 'Dev < />'}`
+  const [ref, active] = useSectionDetector()
 
   return (
-    <section className={styles.development}>
-      <HeaderTitle title={title} />
+    <section ref={ref} className={styles.development}>
+      <HeaderTitle title={title} active={active} />
       <main>
         <Container technologies={technologies} />
         <Container constraints={constraints} />

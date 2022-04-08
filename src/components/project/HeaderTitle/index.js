@@ -1,14 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useSpring, animated } from 'react-spring'
 // styles
 import * as styles from './styles.module.scss'
 // hooks
 import useWindowSize from '../../../hooks/useWindowSize'
 
-const Header = ({ title }) => {
+const Header = ({ title, active }) => {
   const [width] = useWindowSize()
   const [titleLength, setTitleLenght] = useState(null)
   const [titlePos, setTitlePos] = useState(null)
   const ref = useRef()
+
+  // header animation
+  const fadeStyle = useSpring({
+    to: { opacity: active ? 1 : 0, y: 0 },
+    from: { opacity: 0, y: 10 },
+    delay: 500,
+  })
 
   const headerStyle = {
     textAlign: titlePos
@@ -16,18 +24,14 @@ const Header = ({ title }) => {
 
   const titleStyle = {
     left: title !== "Design" ? 0 : null,
-    right: title === "Design" ? 0 : null
-  }
-
-  const h1Style = {
-    paddingRight: title === "Design" && width > 425 ? "1em" : null,
-    paddingLeft: title !== "Design" && width > 425 ? "1em" : null
+    right: title === "Design" ? 0 : null,
   }
 
   const hrStyle = {
     right: title === "Design" ? 0 : null,
     left: title !== "Design" ? 0 : null,
-    width: `${titleLength}px`,
+    width: `calc(${active ? titleLength : 0}px)`,
+    transition: "width 0.35s ease 0.1s"
   }
 
   useEffect(() => {
@@ -42,12 +46,12 @@ const Header = ({ title }) => {
         className={styles.title}
         style={titleStyle}
       >
-        <h1 
+        <animated.h1 
           ref={ref}
-          style={h1Style}
-        >{title}</h1>
+          style={fadeStyle}
+        >{title}</animated.h1>
       </div>
-      <hr style={hrStyle}/>
+      <hr style={hrStyle} />
     </header>
   )
 }
