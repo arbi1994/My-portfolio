@@ -12,8 +12,8 @@
   }
 
   .thumbnail-outer {
-    width: calc(55 * 1vw);
-    height: calc(30 * 1vw);
+    width: 70em;
+    height: 40em;
     box-sizing: border-box;
     border-width: 4px;
     border-style: solid;
@@ -193,7 +193,7 @@
 
       .icon {
         margin-left: 2rem;
-        font-size: clamp(2rem, 4vw, 10rem);
+        font-size: clamp(2rem, 4vw, 8rem);
 
         @include media("<=tablet"){
           font-size: 8rem;

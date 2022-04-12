@@ -1,0 +1,9 @@
+@use '../../../sass/abstracts' as *;
+
+.paragraph {
+  padding-bottom: 10em;
+
+  @include media("<=tablet"){
+    padding-bottom: 15em;
+  }
+}

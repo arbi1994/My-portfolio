@@ -9,6 +9,7 @@ import BackButton from '../components/project/BackButton/index'
 import Design from '../components/project/Design/index'
 import Development from '../components/project/Development/index'
 import Banner from '../components/project/Banner/index'
+import BackToTopBtn from '../components/ScrollToTopBtn/index'
 
 const Project = ({ data }) => {
   const { 
@@ -48,6 +49,7 @@ const Project = ({ data }) => {
       />
       <Banner />
       <BackButton />
+      <BackToTopBtn />
     </div>
   )
 }

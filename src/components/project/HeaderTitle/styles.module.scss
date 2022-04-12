@@ -1,11 +1,15 @@
 @use '../../../sass/abstracts/' as *;
 
 .header {
-  min-height: 11em;
+  min-height: 13em;
   position: relative;
   padding: 5em 0 2em 0;
   margin-bottom: 4em;
   z-index: 2;
+
+  @include media("<=desktop") {
+    min-height: 11em;
+  }
 
   @include media("<=SMdesktop") {
     min-height: 8em;

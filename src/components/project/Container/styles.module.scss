@@ -46,7 +46,7 @@
         text-align: center;
         @include flex(column, space-between, center);
         z-index: 1;
-        line-height: 25px;
+        line-height: 35px;
 
         span {
           width: 5em;

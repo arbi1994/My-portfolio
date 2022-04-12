@@ -18,12 +18,11 @@
 
 .guy {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   right: 0;
   width: 40%;
   z-index: -1;
 
-  
   @include media("<=tablet"){
     width: 50%;
     bottom: 10%;

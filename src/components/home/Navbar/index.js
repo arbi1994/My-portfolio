@@ -43,10 +43,12 @@ const Navbar = () => {
   // desktop render
   const renderedListItems = links.map(({ id, label }) => {
     return (
-      <li 
-        key={id} 
-      > 
-        <button onClick={() => scrollTo(id)}>{label}</button>
+      <li key={id}> 
+        <button 
+          ariaLabel={`go to home"${label}`}
+          title={label} 
+          onClick={() => scrollTo(id)}
+        >{label}</button>
       </li>
     )
   })
@@ -67,7 +69,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbarInner}>
         <div className={styles.navbarLeft}>
-          <Link className={styles.navbarLogo} to='/'>
+          <Link className={styles.navbarLogo} to='/' title="home">
             <img alt="" src={logo}/>
           </Link>
         </div>

@@ -1,0 +1,23 @@
+@use '../../sass/abstracts' as *;
+
+.box {
+  width: 100%;
+  @include flex(row, center, center);
+  min-height: 10vh;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 0;
+  transform: translateX(50%);
+  border: none; 
+  width: 6em;
+  height: 6em;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: linear-gradient(to bottom, $purple, $red);
+  color: $white;
+  padding: 0.5em 0 2em 0;
+  cursor: pointer;
+  z-index: 2;
+}

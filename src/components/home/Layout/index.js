@@ -5,6 +5,7 @@ import ScrollTracker from "../../ScrollTracker/index";
 import Header from '../Header/index'
 import Navbar from '../Navbar/index'
 import Footer from '../Footer/index'
+import ScrollToTopBtn from '../../ScrollToTopBtn';
 
 const layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const layout = ({ children }) => {
       </Header>
       <main id="home">{children}</main>
       <Footer />
+      <ScrollToTopBtn />
     </div>
   )
 }

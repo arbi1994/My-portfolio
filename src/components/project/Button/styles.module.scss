@@ -7,7 +7,7 @@
   height: 20rem;
   border-radius: 50%;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 10%;
   background: transparent;
   color: $white;
@@ -15,6 +15,41 @@
   transform: scale(1);
   @include transition(all, 0.35s);
   @include flex(row, center, center);
+
+  
+  @include media("<=SMdesktop") {
+    width: 18rem;
+    height: 18rem;
+  }
+  
+  @include media("<SMdesktop") {
+    width: 16rem;
+    height: 16rem;
+    right: 5%;
+  }
+
+  @include media("<=tablet") {
+    width: 14rem;
+    height: 14rem;
+    right: 5%;
+  }
+
+  @include media("<tablet") {
+    width: 16rem;
+    height: 16rem;
+    top: 19em;
+    right: 10%;
+  }
+
+  @include media("<=phoneL") {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6em;
+    transform: translateX(-50%);
+  }
 
   &:hover {
     transform: scale(1.1);

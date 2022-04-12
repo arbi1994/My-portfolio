@@ -1,19 +1,45 @@
 @use '../../../sass/abstracts' as *;
 
 .banner {
-  min-height: 90vh;
   @include flex(row, center, center);
   background: $darker-blue;
+
+  @include media("<tablet") {
+    display: block;
+  }
   
   .wrapper {
+    min-height: 90vh;
     padding: 5em 5vw;
     width: 100%;
     position: relative;
 
+    @include media("<tablet") {
+      padding: 2em 5vw;
+    }
+
+    @include media("<=phoneL") {
+      padding: 5em 5vw;
+      min-height: 80vh;
+    }
+
     h1 {
       font-weight: 600;
       letter-spacing: 5%;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
+
+      @include media("<SMdesktop") {
+        margin-bottom: 1.5em;
+      }
+
+      @include media("<tablet") {
+        margin-bottom: 2rem;
+      }
+
+      
+      @include media("<=phoneL") {
+        margin-bottom: 5rem;
+      }
     }
 
     .inner-wrapper {
@@ -23,15 +49,42 @@
       width: 60%;
       @include flex(row, center, center);
 
+      @include media("<=SMdesktop") {
+        left: 10%;
+      }
+
+      @include media("<tablet") {
+        width: 70%;
+        left: 5%;
+      }
+
+      @include media("<=phoneL") {
+        width: 100%;
+        left: 0;
+      }
+
       .vector {
         width: 30%;
         position: relative;
         top: -10em;
         right: -1.5em;
+
+        @include media("<=tablet") {
+          right: -1em;
+          top: -8em;
+        }
+
+        @include media("<tablet") {
+          width: 12em;
+          right: -3em;
+          top: 5em;
+          transform: rotateZ(90deg);
+        }
+
+        @include media("<=phoneL") {
+          display: none;
+        }
       }
     }
-
-  
   }
-
 }
