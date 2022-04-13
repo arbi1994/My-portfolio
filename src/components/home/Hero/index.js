@@ -56,8 +56,8 @@ const Hero = () => {
         >
           <div className={styles.heroWrapper}>
             <div>
-              <animated.h2 style={headerTwoStyle}>{data.allMdx.edges[0].node.frontmatter.title}</animated.h2>
-              <animated.h4 style={headerFourStyle}>{data.allMdx.edges[0].node.frontmatter.subtitle}</animated.h4>
+              <animated.h2 style={headerTwoStyle}>{data.allMdx.edges[0]?.node.frontmatter.title}</animated.h2>
+              <animated.h4 style={headerFourStyle}>{data.allMdx.edges[0]?.node.frontmatter.subtitle}</animated.h4>
             </div>
             <div className={styles.imgContainer}>
               <ScrollDownArrow />
