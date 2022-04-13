@@ -13,7 +13,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-fontawesome-css`,
+    // `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-mdx`,
