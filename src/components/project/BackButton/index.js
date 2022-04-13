@@ -2,7 +2,7 @@ import React from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 // style
 import * as styles from './styles.module.scss'
-import { TiArrowBackOutline } from 'react-icons/Ti'
+import { TiArrowBackOutline } from 'react-icons/ti'
 
 const BackButton = () => {
   return (
