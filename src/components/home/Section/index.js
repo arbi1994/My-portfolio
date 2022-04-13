@@ -32,7 +32,7 @@ const Section = () => {
       query={graphql`
         query getSectionDataAndGetThumbnailData {
           section: allMdx(
-            filter: {frontmatter: {section: {ne: null}}}
+            filter: {frontmatter: {order: {ne: null}}}
             sort: {fields: frontmatter___order, order: ASC}
           ) {
             edges {
