@@ -34,15 +34,11 @@ const Hero = () => {
   return (
     <StaticQuery
       query={graphql`
-        query HeroSectionQuery($eq: String = "af3ef620-b601-58ff-b3c8-315d8490b6ac") {
-          allMdx(filter: {id: {eq: $eq}}) {
-            edges {
-              node {
-                frontmatter {
-                  subtitle
-                  title
-                }
-              }
+        query HeroSectionQuery {
+          mdx(frontmatter: {section: {eq: "hero"}}) {
+            frontmatter {
+              subtitle
+              title
             }
           }
         }
@@ -56,8 +52,8 @@ const Hero = () => {
         >
           <div className={styles.heroWrapper}>
             <div>
-              <animated.h2 style={headerTwoStyle}>{data.allMdx.edges[0]?.node.frontmatter.title}</animated.h2>
-              <animated.h4 style={headerFourStyle}>{data.allMdx.edges[0]?.node.frontmatter.subtitle}</animated.h4>
+              <animated.h2 style={headerTwoStyle}>{data.mdx.frontmatter.title}</animated.h2>
+              <animated.h4 style={headerFourStyle}>{data.mdx.frontmatter.subtitle}</animated.h4>
             </div>
             <div className={styles.imgContainer}>
               <ScrollDownArrow />
