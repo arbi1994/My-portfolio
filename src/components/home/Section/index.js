@@ -11,9 +11,15 @@ import Contacts from '../Contacts/index'
 import useSectionIdentifier from '../../../hooks/useSectionIdentifier';
 
 const Section = () => {
-  const projectRef = useSectionIdentifier(document.getElementById('box-2'))
-  const aboutRef = useSectionIdentifier(document.getElementById('box-3'))
-  const contactRef = useSectionIdentifier(document.getElementById('box-4'))
+  const projectRef = useSectionIdentifier(
+    typeof document !== 'undefined' ? document.getElementById('box-2') : null
+  )
+  const aboutRef = useSectionIdentifier(
+    typeof document !== 'undefined' ? document.getElementById('box-3') : null
+  )
+  const contactRef = useSectionIdentifier(
+    typeof document !== 'undefined' ? document.getElementById('box-4') : null
+  )
 
   function setRefValue(section){
     if(section === 'projects') return projectRef

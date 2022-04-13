@@ -9,7 +9,9 @@ import ScrollDownArrow from '../../../assets/hero-section/ScrollDownArrow'
 import useSectionIdentifier from '../../../hooks/useSectionIdentifier';
 
 const Hero = () => {
-  const heroRef = useSectionIdentifier(document.getElementById('box-1'))
+  const heroRef = useSectionIdentifier(
+    typeof document !== 'undefined' ? document.getElementById('box-1') : null
+  )
 
   const headerTwoStyle = useSpring({
     to: { opacity: 1, x: 0 },

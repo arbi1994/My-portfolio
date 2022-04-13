@@ -24,7 +24,7 @@ const Project = ({ data }) => {
     technologies,
     constraints,
     summary
-  } = data.mdx.frontmatter
+  } = data?.mdx?.frontmatter
  
   return (
     <div className={styles.projectLayout}>
@@ -37,7 +37,7 @@ const Project = ({ data }) => {
       />
       <Idea idea={idea}/>
       <Design 
-        id={data.mdx.id}
+        id={data?.mdx?.id}
         typography={typography}
         colors={colors}
         pages={pages}

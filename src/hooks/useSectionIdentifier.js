@@ -18,7 +18,7 @@ const useSectionIdentifier = (el) => {
   });
 
   function detectSection(){
-    if(el !== null){
+    if(el !== null && typeof el !== 'undefined'){
       inView ? el.classList.add(styles.fill) : el.classList.remove(styles.fill)
     }
   }
