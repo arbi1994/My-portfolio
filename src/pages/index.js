@@ -7,11 +7,11 @@ import Hero from '../components/home/Hero/index'
 // import Seo from "../components/seo"
 import Section from "../components/home/Section/index"
 
-const IndexPage = () => (
+const HomePage = () => (
   <Layout>
     <Hero />
     <Section />
   </Layout>
 )
 
-export default IndexPage
+export default HomePage

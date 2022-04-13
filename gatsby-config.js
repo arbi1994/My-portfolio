@@ -14,7 +14,9 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-transition-link`,
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

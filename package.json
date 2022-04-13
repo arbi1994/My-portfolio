@@ -64,6 +64,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "peerDependencies": {
-    "gatsby": "^4.10.2 || 2.0.0"
+    "gatsby": "^4.1 || 2.0.0"
   }
 }

@@ -1,10 +1,10 @@
 @use '../sass/abstracts/' as *;
 
 .project-layout {
+  min-height: 100vh;
   background: $dark-blue;
   color: $white;
   max-width: 1440px;
   margin: 0 auto;
   z-index: 0;
-  overflow-x: hidden;
 }

@@ -49,7 +49,6 @@ const Project = ({ data }) => {
       />
       <Banner />
       <BackButton />
-      <BackToTopBtn />
     </div>
   )
 }

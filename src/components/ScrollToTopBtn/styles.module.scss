@@ -1,15 +1,15 @@
 @use '../../sass/abstracts' as *;
 
 .box {
+  min-height: 10vh;
   width: 100%;
   @include flex(row, center, center);
-  min-height: 10vh;
 }
 
 .scroll-to-top {
   position: fixed;
   bottom: 0;
-  transform: translateX(50%);
+  // transform: translateX(50%);
   border: none; 
   width: 6em;
   height: 6em;
