@@ -45,7 +45,7 @@ const Navbar = () => {
     return (
       <li key={id}> 
         <button 
-          ariaLabel={`go to home"${label}`}
+          aria-label={`go to home"${label}`}
           title={label} 
           onClick={() => scrollTo(id)}
         >{label}</button>

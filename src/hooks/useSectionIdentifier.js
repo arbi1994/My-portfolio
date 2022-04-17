@@ -10,7 +10,7 @@ const useSectionIdentifier = (el) => {
   const [rootMargin, setRootMargin] = useState(height)
 
   useEffect(() => {
-    setRootMargin(height/2 - 0.9)
+    setRootMargin(height/2.01)
   }, [height])
 
   const { inView, ref } = useInView({

@@ -7,28 +7,28 @@ const ScrollTracker = () => {
   return (
     <div className={styles.scrollTrackerContainer}>
       <button 
-        ariaLabel="scroll to home" 
+        aria-label="scroll to home" 
         title="home" 
         id="box-1" 
         className={styles.box} 
         onClick={() => scrollTo('#home')}
       />
       <button 
-        ariaLabel="scroll to projects" 
+        aria-label="scroll to projects" 
         title="projects" 
         id="box-2" 
         className={styles.box} 
         onClick={() => scrollTo('#projects')} 
       />
       <button 
-        ariaLabel="scroll to about" 
+        aria-label="scroll to about" 
         title="about" 
         id="box-3" 
         className={styles.box} 
         onClick={() => scrollTo('#about')} 
       />
       <button 
-        ariaLabel="scroll to contact" 
+        aria-label="scroll to contact" 
         title="contact" 
         id="box-4" 
         className={styles.box} 
